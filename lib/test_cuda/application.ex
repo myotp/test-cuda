@@ -7,6 +7,8 @@ defmodule TestCuda.Application do
 
   @impl true
   def start(_type, _args) do
+    IO.inspect(Application.get_env(:test_cuda, :test_user), label: "Test User")
+
     children = [
       # Starts a worker by calling: TestCuda.Worker.start_link(arg)
       # {TestCuda.Worker, arg}
