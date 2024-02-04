@@ -6,3 +6,7 @@ config :nx, :default_backend, EXLA.Backend
 
 # https://hexdocs.pm/exla/EXLA.html#module-clients
 config :exla, :default_client, :cuda
+
+config :exla, :clients,
+  host: [platform: :host],
+  cuda: [platform: :cuda]
